@@ -1,16 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { SendMsg } from '../utils/UsersDataSlice'
 
 
 const Chat = () => {
 
-  const[textMsg, setTextMsg] = useState("")
+  const composerData = useSelector(store => store.Composer)
+  const[textMsg, setTextMsg] = useState(composerData)
   const dispatch = useDispatch()
   const userSliceData = useSelector(store => store.User)
   const currUser = useSelector(store => store.CurrentUser)
   const currUserData = userSliceData[currUser]
   
+  useEffect(() => {
+    setTextMsg(composerData);
+  }, [composerData]);
+
 
   return (
     <div className='h-full w-[70vw] border border-t-0 relative'>
@@ -61,10 +66,8 @@ const Chat = () => {
             setTextMsg(e.target.value)
           }} value={textMsg} type="text" placeholder='Use ⌘K for shortcuts' className='w-full'/> */}
           <textarea  className='h-[50%] min-h-5 w-full outline-none border-none' placeholder='Use ⌘K for shortcuts ' value={textMsg} onChange={(e)=>{
-              const val = e.target.value
-              if(val.trim() !== ""){
-                setTextMsg(val)
-              }
+              if(e.target.value.trim() == "")return
+              setTextMsg(e.target.value)
           }} ></textarea>
         </div>
 
@@ -76,6 +79,7 @@ const Chat = () => {
           </div>
 
           <button onClick={() => {
+            if(!textMsg.length)return
             dispatch(SendMsg({currUser, textMsg}))
             setTextMsg("")
           }} className="flex items-center gap-1 text-gray-500 font-medium hover:text-black">
