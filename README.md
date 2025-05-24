@@ -1,12 +1,38 @@
-# React + Vite
+# 🧠 Fin AI Copilot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Fin AI Copilot** is a smart, responsive customer support chat interface powered by Google Gemini AI. It allows users to send and receive messages in a smooth, intuitive UI — with the added ability to get contextual AI assistance instantly.
 
-Currently, two official plugins are available:
+🔗 **Live Demo**:(https://finai-mgqz.onrender.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📌 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔄 Real-time chat interface with Redux state management
+- 🤖 Gemini AI Copilot for smart, friendly, and helpful replies
+- 🧩 Clean modular architecture using React components
+- 🌓 UI interactions with icons for actions and modes
+- 📱 Fully responsive layout with Tailwind CSS
+- 🗂️ Composer panel with "Add to Composer" AI suggestions
+- 📋 Details panel for additional context
+
+---
+
+## ⚙️ Tech Stack
+
+- **React.js** – Frontend framework
+- **Redux Toolkit** – State management
+- **Tailwind CSS** – Utility-first CSS framework
+- **Google GenAI (Gemini)** – AI assistant integration
+- **FontAwesome** – Icons and UI elements
+
+---
+
+## 🚀 Getting Started
+
+Clone the repository and install dependencies:
+
+git clone https://github.com/Ankush-accio/FinAi.git
+cd FinAi
+npm install
+npm run dev
