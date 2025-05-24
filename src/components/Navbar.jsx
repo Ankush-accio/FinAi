@@ -8,10 +8,10 @@ const Navbar = () => {
   let obj = userData[currUser]
 
   return (
-    <div className='h-[8vh] flex  gap-2.5  items-center border'>
-            <h2 className='text-xl font-bold w-[30%] pl-10'>Your inbox</h2>
+    <div className='h-[8vh] flex  flex-wrap sm:flex-nowrap gap-2.5 items-center border border-gray-300'>
+            <h2 className='text-xl font-bold w-full sm:w-[30%] pl-10'>Your inbox</h2>
 
-        <div className='flex justify-between  w-[90%] px-3'>
+        <div className='flex justify-between  w-full sm:w-[90%]] px-3'>
             <h2 className='text-xl font-bold pl-12'>{obj.name}</h2>
 
 

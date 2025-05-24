@@ -9,9 +9,9 @@ const Conversation = () => {
   const countOfCard = data.length
 
   return (
-    <div className=' w-[30vw] h-full border border-r-0 border-t-0 flex relative'>
+    <div className=' w-[100vw] sm:w-[30vw] h-full border border-r-0 border-t-0 border-gray-300 flex relative'>
 
-
+      {/* two buttons  */}
       <div className="flex gap-10 p-2 mx-5 font-bold fixed">
         <h2> 
           <span>{countOfCard}</span> Open
@@ -23,14 +23,15 @@ const Conversation = () => {
       </div>
 
 
-    <div className="mt-8 overflow-auto flex flex-col w-full">
+    {/* body */}
+    <div className="mt-8 overflow-auto flex flex-col w-full pb-30">
       {data && data.map((items , index)=>{
         
         return <ConvoCard currIdx={index} key={index} name = {items.name} message = {items.messages[0].text} time = {items.time} avatarBg = {items.avatarBg} icon={items.name.slice(0,1)}/>
       })}
 
 
-      
+      {/* footer icons */}
       </div>
             <div className="fixed flex gap-2 text-2xl m-4  bottom-0 bg-gray-50 rounded-xl shadow-md ">
             <i className="fa-solid fa-table-columns fa-rotate-90 hover:bg-gray-300 rounded-xl p-2"></i>

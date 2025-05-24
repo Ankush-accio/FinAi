@@ -11,7 +11,7 @@ const LeftComp = () => {
       <Navbar/>
       <div className='flex h-[92vh]'>
       <Conversation/>
-      <Chat/>
+      <Chat className='sm:w-[70vw]'/>
       </div>
     </div>
   )
